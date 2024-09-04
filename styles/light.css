@@ -1,12 +1,30 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+    --nav-and-topic-title-color: rgb(53,52,48);
+    --menu-button-hover: rgb(53,52,48,0.4);
+    --xl-title-color: rgb(255,194,230);
+    --accent-color: rgb(255,141,203);
+    --main-text-color: rgb(53,52,48);
+    --decor-title-color: rgb(53,52,48);
+    --bg-image: url(../images/cover-image-light.png);
+}
+
+.page.theme_light .header__title-decor {
+  text-shadow: none;
+}
+
+.page.theme_light .REC-sign {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+      --nav-and-topic-title-color: rgb(53,52,48);
+      --menu-button-hover: rgb(53,52,48,0.4);
+      --xl-title-color: rgb(255,194,230);
+      --xl-title-shadow-color: rgb(255,0,112);
+      --accent-color: rgb(255,141,203);
+      --main-text-color: rgb(53,52,48);
+      --decor-title-color: rgb(53,52,48);
+      --bg-image: url(../images/cover-image-light.png);    
+    }
 }

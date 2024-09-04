@@ -2,4 +2,316 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--page-gap, 40px);
+  font-family: var(--main-font-family, IBM Plex mono);
+  background-image: var(--bg-image, url(../images/cover-image-dark.png));
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  padding: var(--page-padding, 10px);
+  block-size: 100vh;
+}
+
+.REC-sign {
+  position: absolute;
+  color: var(--accent-color, rgb(255,0,112));
+  font-size: var(--main-font-size, 18px);
+  line-height: 139%;
+  inset-inline-end: var(--page-padding, 10px);
+  inset-block-start: var(--page-padding, 10px);
+}
+
+.REC-sign::after {
+  content: "";
+  display: inline-block;
+  margin: 0 10px 2px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px 2px var(--accent-color, rgb(255,0,112));
+  background-color: var(--accent-color, rgb(255,0,112));
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  display: block;
+  justify-self: end;
+  border-inline-end: 1px solid var(--nav-and-topic-title-color, rgb(255,0,112));
+  border-block-start: 1px solid var(--nav-and-topic-title-color, rgb(255,0,112));
+  block-size: 25px;
+  inline-size: 25px;
+  inset-inline-end: var(--page-padding, 10px);
+  inset-block-start: var(--page-padding, 10px);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-inline-start: 1px solid var(--nav-and-topic-title-color, rgb(255,0,112));
+  border-block-end: 1px solid var(--nav-and-topic-title-color, rgb(255,0,112));
+  block-size: 25px;
+  inline-size: 25px;
+  inset-inline-start: var(--page-padding, 10px);
+  inset-block-end: var(--page-padding, 10px);
+}
+
+.header__theme-menu {
+  justify-self: end;
+  align-self: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  border: 1px solid transparent;
+  padding: 3px 13px;
+  color: var(--nav-and-topic-title-color, rgb(255,0,112));
+  font-family: var(--main-font-family, IBM Plex mono);
+  font-weight: normal;
+  font-size: var(--main-font-size, 18px);
+  line-height: 100%;
+  text-transform: lowercase;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--menu-button-hover, rgb(255,0,112,0.4));
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--nav-and-topic-title-color, rgb(255,0,112));
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--nav-and-topic-title-color, rgb(255,0,112));
+}
+
+.xl-title {
+  color: var(--xl-title-color, rgb(219,0,255));
+  font-weight: bold;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+}
+
+.header__xl-title {
+  text-shadow: var(--header-xl-title-shadow, 4px 4px rgb(255,0,112));
+}
+
+.title-decor {
+  margin-block-end: 10px;
+  color: var(--decor-title-color, rgb(0,0,40));
+  font-weight: bold;
+  font-size: var(--main-font-size, 18px);
+  line-height: 130%;
+  background-color: var(--accent-color, rgb(255,0,112));
+}
+
+.header__title-decor {
+  display: inline-block;
+  justify-self: end;
+  align-self: center;
+  margin-block-end: 0;
+  text-shadow: var(--header__title-decor-shadow, 0 4px 4px rgb(0,0,40,0.4));
+  inline-size: 100%;
+}
+
+.title-decor-topic-education {
+  font-weight: normal;
+}
+
+.title-decor-no-margin {
+  margin-block-end: 0;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--main-gap, 50px);
+  padding-inline-start: var(--page-padding, 10px);
+  padding-inline-end: var(--page-padding, 10px);
+}
+
+.topics-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-topics, 20px);
+}
+
+.topic-title {
+  color: var(--nav-and-topic-title-color, rgb(255,0,112));
+  font-weight: bold;
+  font-size: var(--main-font-size, 18px);
+  line-height: 130%;
+}
+
+.topic-text {
+  color: var(--main-text-color, rgb(241,178,206));
+  font-weight: normal;
+  font-size: var(--main-font-size, 18px);
+  line-height: 130%;
+}
+
+a {
+  text-decoration: none;
+  text-shadow: 2px 2px var(--accent-color, rgb(255,0,112));
+}
+
+a:hover {
+  border-block-end: 1px solid var(--main-text-color, rgb(241,178,206));
+}
+
+a:focus {
+  outline: none;
+}
+
+a:focus-visible {
+  outline: 1px solid var(--main-text-color, rgb(241,178,206));
+}
+
+.images-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: var(--page-padding, 10px);
+  padding: var(--page-padding, 10px);
+  block-size: 100vh;
+}
+
+.footer__xl-title {
+  justify-self: center;
+  align-self: center;
+  text-shadow: var(--footer--xl-title-shadow, 2px 2px rgb(255,0,112));
+}
+
+@media (width >= 768px) {
+  
+  :root {
+    --page-padding: 20px;
+    --page-gap: 60px;
+    --main-gap: 80px;
+  }
+
+  .header {
+    padding-inline-start: 0;
+  }
+
+  .xl-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__title-decor {
+    inline-size: 49%;
+    text-shadow: none;
+  }
+
+  .topics-reasons,
+  .topics-education {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .topics-object {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .topics-reasons article,
+  .topics-education article {
+    grid-column: 2;
+  }
+
+  .topics-education .topic-title {
+    grid-row: span 2;
+  }
+
+  .topics-object .topic-title {
+    grid-column: 1;
+  }
+
+  .topics-object article {
+    grid-column: span 3;
+  }
+
+  .images-section {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .images-section .title-decor {
+    grid-column: span 3;
+  }
+  
+  .image-sunset,
+  .image-street {
+    grid-column: span 2;
+  }
+
+  .image-ice-cream,
+  .image-tape {
+    grid-row: span 2;
+  }
+}
+
+@media (width >= 1024px) {
+
+  .topics-object article {
+    grid-column: span 1;
+    grid-row: 2;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+    margin-inline-start: var(--page-padding, 20px);
+  }
+  
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .topics-reasons,
+  .topics-education {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .topics-reasons article,
+  .topics-education article {
+    grid-column: 2 / 4;
+  }
+
+  .topics-education .topic-title {
+    grid-row: span 2;
+  }
 }
