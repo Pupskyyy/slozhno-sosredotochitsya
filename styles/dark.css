@@ -1,12 +1,12 @@
 .page.theme_dark {
-    --nav-and-topic-title-color: rgb(255,0,112);
-    --menu-button-hover: rgb(255,0,112,0.4);
-    --xl-title-color: rgb(219,0,255);
-    --header-xl-title-shadow: 4px 4px rgb(255,0,112);
-    --footer--xl-title-shadow: 2px 2px rgb(255,0,112);
-    --accent-color: rgb(255,0,112);
-    --main-text-color: rgb(241,178,206);
-    --decor-title-color: rgb(0,0,40);
-    --header__title-decor-shadow: 0 4px 4px rgb(0,0,40,0.4);
-    --bg-image: url(../images/cover-image-dark.png);
+  --nav-and-topic-title-color: rgb(255, 0, 112);
+  --menu-button-hover: rgb(255, 0, 112, 0.4);
+  --xl-title-color: rgb(219, 0, 255);
+  --header-xl-title-shadow: 4px 4px rgb(255, 0, 112);
+  --footer--xl-title-shadow: 2px 2px rgb(255, 0, 112);
+  --accent-color: rgb(255, 0, 112);
+  --main-text-color: rgb(241, 178, 206);
+  --decor-title-color: rgb(0, 0, 40);
+  --header__title-decor-shadow: 0 4px 4px rgb(0, 0, 40, 0.4);
+  --bg-image: url(../images/cover-image-dark.png);
 }

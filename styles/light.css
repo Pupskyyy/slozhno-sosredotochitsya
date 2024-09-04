@@ -1,11 +1,11 @@
 .page.theme_light {
-    --nav-and-topic-title-color: rgb(53,52,48);
-    --menu-button-hover: rgb(53,52,48,0.4);
-    --xl-title-color: rgb(255,194,230);
-    --accent-color: rgb(255,141,203);
-    --main-text-color: rgb(53,52,48);
-    --decor-title-color: rgb(53,52,48);
-    --bg-image: url(../images/cover-image-light.png);
+  --nav-and-topic-title-color: rgb(53, 52, 48);
+  --menu-button-hover: rgb(53, 52, 48, 0.4);
+  --xl-title-color: rgb(255, 194, 230);
+  --accent-color: rgb(255, 141, 203);
+  --main-text-color: rgb(53, 52, 48);
+  --decor-title-color: rgb(53, 52, 48);
+  --bg-image: url(../images/cover-image-light.png);
 }
 
 .page.theme_light .header__title-decor {
@@ -18,13 +18,13 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-      --nav-and-topic-title-color: rgb(53,52,48);
-      --menu-button-hover: rgb(53,52,48,0.4);
-      --xl-title-color: rgb(255,194,230);
-      --xl-title-shadow-color: rgb(255,0,112);
-      --accent-color: rgb(255,141,203);
-      --main-text-color: rgb(53,52,48);
-      --decor-title-color: rgb(53,52,48);
-      --bg-image: url(../images/cover-image-light.png);    
-    }
+    --nav-and-topic-title-color: rgb(53, 52, 48);
+    --menu-button-hover: rgb(53, 52, 48, 0.4);
+    --xl-title-color: rgb(255, 194, 230);
+    --xl-title-shadow-color: rgb(255, 0, 112);
+    --accent-color: rgb(255, 141, 203);
+    --main-text-color: rgb(53, 52, 48);
+    --decor-title-color: rgb(53, 52, 48);
+    --bg-image: url(../images/cover-image-light.png);
+  }
 }
