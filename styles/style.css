@@ -1,7 +1,4 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--page-gap, 40px);
@@ -11,6 +8,7 @@
   background-size: cover;
   background-attachment: fixed;
   block-size: 100vh;
+  background-color: rgb(0,0,40);
 }
 
 .header {
