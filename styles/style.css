@@ -10,6 +10,7 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  block-size: 100vh;
 }
 
 .header {
@@ -209,7 +210,6 @@ footer {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  padding: var(--page-padding, 10px);
   padding: var(--page-padding, 10px);
   block-size: 100vh;
 }
