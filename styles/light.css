@@ -1,3 +1,11 @@
+.page.theme_light .header__title-decor {
+  text-shadow: none;
+}
+
+.page.theme_light .rec-sign {
+  display: none;
+}
+
 .page.theme_light {
   --nav-and-topic-title-color: rgb(53, 52, 48);
   --menu-button-hover: rgb(53, 52, 48, 0.4);
@@ -7,14 +15,6 @@
   --decor-title-color: rgb(53, 52, 48);
   --bg-image: url(../images/cover-image-light.png);
   --bg-color: rgb(255, 241, 247);
-}
-
-.page.theme_light .header__title-decor {
-  text-shadow: none;
-}
-
-.page.theme_light .REC-sign {
-  display: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -30,7 +30,7 @@
     --bg-color: rgb(255, 241, 247);
   }
 
-  .REC-sign {
+  .rec-sign {
     display: none;
   }
 
